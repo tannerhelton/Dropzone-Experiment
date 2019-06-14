@@ -1,0 +1,31 @@
+<html>
+  <body>
+    <link rel="stylesheet" href="basic.css" />
+    <link rel="stylesheet" href="dropzone.css" />
+    <script type="text/javascript" src="dropzone.js"></script>
+    <form
+      id="my"
+      enctype="multipart/form-data"
+      action="/upload"
+      method="post"
+      class="dropzone"
+    >
+      <div class="fallback">
+        <input name="file" type="file" />
+      </div>
+      <script type="text/javascript">
+        Dropzone.options.my = {
+          paramName: "photo", // The name that will be used to transfer the file
+          maxFilesize: 1024, // MB
+          url: "/upload"
+        };
+      </script>
+      <script
+        src="http://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"
+      ></script>
+      <scrip src="./main.js"></scrip>
+    </form>
+  </body>
+</html>
